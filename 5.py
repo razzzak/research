@@ -18,4 +18,7 @@ mus = re.findall('<MU.*?>(MU_\d+).*?<ports>(.*?)</ports>.*?</MU.*?>', text, re.D
 
 objs_ied = [IED(_id, int(ports)) for _id, ports in ieds]
 objs_mu = [MU(_id, int(ports)) for _id, ports in mus]
+print(ieds)
+print(objs_mu)
 
+"получить потоки с иедов. добавить датастрим как логическую сущность. у иедов есть поле дата стрим и у мю. в итоге нужно будет вывести массив где можно будет посмотреть связь иедов и мю"
