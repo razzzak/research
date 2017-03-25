@@ -44,9 +44,6 @@ class TestUM(unittest.TestCase):
         print("%i genes are crossed with osob_2"%(changeCount_cross2))
         assert(changeCount_cross>=0 or changeCount_cross2>=0)
         assert(changeCount_cross<5 or changeCount_cross2<5)
-        #print (osob_1.genom)
-        #print (osob_2.genom)
-        #print (osob_1x2.genom)
 
     def test_fitness1(self):
         length=21
@@ -61,7 +58,6 @@ class TestUM(unittest.TestCase):
     def test_fitness2(self):
         length=21
         osob1=Osob(length)
-        #osob1.genom=[1,1,1,1,0,1,1,0,1,0,1,1]
         osob1.genom=[1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,0,1,0,1,0,1]
         z=self.genalg.fitness2(osob1.genom)
         print ("fitness2 = ")
@@ -76,9 +72,7 @@ class TestUM(unittest.TestCase):
         y=self.genalg.fitness3(osob3.genom)
         print ("fitness3 = ")
         print (y)
-        assert(y>2)
-        #print ("fitness3 = %n"%(n))
-
+        assert(y<2)
 
 
 if __name__ == '__main__':

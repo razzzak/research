@@ -1,5 +1,6 @@
 import random
 from switch import Switch
+from physical_link import Physical_link
 
 class Osob:
     
@@ -8,6 +9,7 @@ class Osob:
     switchQuantity=0
     portNumber=Switch.portNumber
     portNumberGB=Switch.portNumGB
+    ph_link=[]
     
     def __init__(self, length):
         self.genom=[]

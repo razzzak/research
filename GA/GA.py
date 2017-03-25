@@ -38,7 +38,6 @@ class GenAlg:
                 i.genEnd=(len(self.genom))
         
         
-        self.fitness_functions=[GenAlg.fitness1, GenAlg.fitness2, GenAlg.fitness3]
         self.population = []
 
         # создание популяции
@@ -56,7 +55,10 @@ class GenAlg:
         os_y=[]
         step=0
 
-        while self.bestOsob_alive < 100: #основное тело алгоритма: пока лучшая особь не останется лучшей 100 раз, алгоритм сортирует
+        self.fitness_functions=[GenAlg.fitness1, GenAlg.fitness2, GenAlg.fitness3]
+        self.fitness_functions_3modul=[GenAlg.fitness1, GenAlg.fitness2, GenAlg.fitness3, GenAlg.fitnessAstar]
+
+        while self.bestOsob_alive < 100: #основное тело 2 модуля: пока лучшая особь не останется лучшей 100 раз, алгоритм сортирует
             os_y.append(self.bestOsob.fit)
             os_x.append(step)
             for i in range(1000):
@@ -76,51 +78,83 @@ class GenAlg:
             for osob in self.population[1:(bestNum)]:
                 self.mutation(osob)
             step+=1
-        print (self.bestOsob.genom)
-        print (self.bestOsob.fit)
         plt.scatter (os_x,os_y)
         plt.xlim(0,150)
         plt.ylim(0,10500)
         plt.show()
-        self.Ph_link=[]
-        self.visualis(self.bestOsob.genom,self.Ph_link)
+
+
+        while len(self.population)>100: #уменьшим популяцию до 100 особей
+            del self.population[100]
+
+        for i in range(100):  #добавим оставшимся особям физические связи
+            self.ph_links(self.population[i])
+            self.population[i].fit=10000
+
+        self.bestOsob_alive=0
+        while self.bestOsob_alive < 100: #пока лучшая особь не останется лучшей 100 раз 
+            for i in range(100):        #алгоритм работает с учетом третьего модуля
+                self.fitness_3modul(self.population[i])
+            self.population.sort(key=lambda Osob: Osob.fit)
+            if self.bestOsob.genom!=self.population[0].genom: #счетчик алгоритма
+                self.bestOsob.genom=self.population[0].genom[:]
+                self.bestOsob.fit=self.population[0].fit
+                self.bestOsob.ph_link=self.population[0].ph_link[:]
+                self.bestOsob_alive=0
+            else:
+                self.bestOsob_alive = self.bestOsob_alive+1
+            bestNum=int((len(self.population))*0.2) #выбираем процент лучших особей, 
+            best=self.population[0:(bestNum)]
+            for osob in self.population[(bestNum):-1]:
+                self.cross(best, osob)
+                self.ph_links(osob)
+            for osob in self.population[1:(bestNum)]:
+                self.mutation(osob)
+                self.ph_links(osob)
+
+        print (self.bestOsob.genom)
+        print (self.bestOsob.fit)
+        self.ph_link=[]
+        self.ph_links(self.bestOsob)
+        #print (self.bestOsob.ph_link[0].home)
         #print (self.Ph_link)
+
+        #return self.bestOsob
   
 
-    def visualis(self, genom, Ph_link):
+    def ph_links(self, osob): #определение физических связей
         for ied1 in self.IED:
-            genPart = genom[ied1.genStart:ied1.genEnd]
+            genPart = osob.genom[ied1.genStart:ied1.genEnd]
             for i in genPart:
                 if i>0:
                     phl=Physical_link()
-                    self.Ph_link.append(phl)
                     phl.home=ied1
                     phl.end=self.Switch[i]
+                    osob.ph_link.append(phl)
                 else:
                     continue
         for switch1 in self.Switch:
             n=self.Switch.index(switch1)
-            genPart = genom[switch1.genStart:switch1.genEnd]
-            for i in genPart[0:n]:
+            genPart1 = osob.genom[switch1.genStart:switch1.genEnd]
+            for i in genPart1[0:n]:
                 if i>0:
                     phl=Physical_link()
-                    self.Ph_link.append(phl)
                     phl.home=switch1
                     phl.end=self.Switch[i]
+                    osob.ph_link.append(phl)
                 else:
                     continue
-            for i in genPart[n:(len(genPart))]:
+            for i in genPart1[n:(len(genPart1))]:
                 if i>0:
                     phl=Physical_link()
-                    self.Ph_link.append(phl)
                     phl.home=switch1
                     phl.end=self.Switch[(i+1)]
+                    osob.ph_link.append(phl)
                 else:
                     continue
-        return Ph_link
+        return osob
     
                 
-
     def fitness(self, osob): #подсчет фитнесс-функции
         g = osob.genom
         osob.fit=0
@@ -128,6 +162,12 @@ class GenAlg:
             osob.fit = osob.fit + f(self, g)
         return (osob.fit)
 
+    def fitness_3modul(self, osob): #подсчет фитнесс-функции с учетом 3 модуля
+        g = osob.genom
+        osob.fit=0
+        for f in self.fitness_functions_3modul:
+            osob.fit = osob.fit + f(self, g)
+        return (osob.fit)
 
 
     def fitness1(self, genom): #первая фитнесс-функция. проверяет, чтобы все иеды имели хотя бы одно подкл-е
@@ -198,8 +238,10 @@ class GenAlg:
             else:
                 f3+=0
         return f3
+    
             
-            
+    def fitnessAstar(self, osob): #здесь д.б. 3й модуль
+        return 3
  
 
     def cross(self, good_pop, bad_old_osob): #скрещивание
@@ -229,6 +271,5 @@ class GenAlg:
             z+=1
         return osob 
 
-        return self.bestOsob
         
         
