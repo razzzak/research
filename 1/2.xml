@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+<IEDs-info>
+<IED>
+<name>IED_1</name>
+<ports>10</ports>
+</IED>
+<IED>
+<name>IED_2</name>
+<ports>10</ports>
+</IED>
+<IED_3>
+<name>IED_3</name>
+<ports>10</ports>
+</IED_3>
+<IED_4>
+<name>IED_4</name>
+<ports>10</ports>
+</IED_4>
+   
