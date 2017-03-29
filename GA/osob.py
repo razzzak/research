@@ -13,5 +13,6 @@ class Osob:
     
     def __init__(self, length):
         self.genom=[]
+        self.ph_link=[]
         for i in range(length):
             self.genom.append(random.randint(0,1)) 

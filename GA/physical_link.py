@@ -1,4 +1,4 @@
 class Physical_link:
     home= None
     end= None
-    weigt = 1
+    weight = 1
