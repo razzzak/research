@@ -1,5 +1,7 @@
 import random
 from osob import Osob 
+import random
+from osob import Osob 
 from ied import IED 
 from switch import Switch
 from port import Port
@@ -19,9 +21,11 @@ class GenAlg:
         pass
     
     #создание генома
-    def __init__(self, IED, Switch, Logical_conn):
+    def __init__(self, MU, Terminal, Switch, Logical_conn):
         self.genom=[]
-        self.IED=IED
+        self.MU=MU
+        self.Terminal=Terminal
+        self.IED=self.MU+self.Terminal
         self.Switch = Switch
         self.Log_Con=Logical_conn
         v = len(self.Switch)
@@ -43,7 +47,6 @@ class GenAlg:
             else:
                 i.genEnd=(len(self.genom))
         print(Switch[0].name)
-        print(Switch[1].name)
         
         
         self.population = []
@@ -56,18 +59,17 @@ class GenAlg:
             self.population[i]=Osob(len(self.genom))
             self.portNumberGB=Osob.portNumberGB
         
-        self.bestOsob=Osob(len(self.genom))
-        #self.bestOsob.genom=self.population[0].genom[:] #лучшая особь - первая особь популяции
+        self.bestOsob=Osob(len(self.genom)) 
         self.bestOsob_alive=0
         os_x=[]
         os_y=[]
         step=0
 
-        self.fitness_functions=[GenAlg.fitness1, GenAlg.fitness2, GenAlg.fitness3]
-        self.fitness_functions_3modul=[GenAlg.fitness1, GenAlg.fitness2, GenAlg.fitness3]
+        self.fitness_functions=[GenAlg.fitness1, GenAlg.fitness2, GenAlg.fitness3, GenAlg.fitness4, GenAlg.fitness5]
+        self.fitness_functions_3modul=[GenAlg.fitness1, GenAlg.fitness2, GenAlg.fitness3, GenAlg.fitness5]
 
-        while self.bestOsob_alive < 100: #основное тело 2 модуля: пока лучшая особь не останется лучшей 100 раз, алгоритм сортирует
-            os_y.append(self.bestOsob.fit)
+        while self.bestOsob_alive < 100: #основное тело 2 модуля: пока лучшая особь 
+            os_y.append(self.bestOsob.fit) #не останется лучшей 100 раз, алгоритм сортирует
             os_x.append(step)
             for i in range(1000):
                 self.fitness(self.population[i])
@@ -79,96 +81,110 @@ class GenAlg:
                 self.bestOsob_alive=0
             else:
                 self.bestOsob_alive = self.bestOsob_alive+1
-            bestNum=int((len(self.population))*0.2) #выбираем процент лучших особей, 
+            bestNum=int((len(self.population))*0.2) #выбираем процент лучших особей
             best=self.population[0:(bestNum)]
             for osob in self.population[(bestNum):-1]:
                 self.cross(best, osob)
             for osob in self.population[1:(bestNum)]:
                 self.mutation(osob)
             step+=1
-        plt.scatter (os_x,os_y)
-        plt.xlim(0,150)
-        plt.ylim(0,10500)
+        #plt.scatter (os_x,os_y)
+        plt.xlim(-50,150)
+        plt.ylim(-50,600)
         #plt.show()
 
-        #for osob in range(950,980):
-         #   print(self.population[osob].fit)
 
         for i in range(1000):
             self.fitness(self.population[i])
 
         self.population.sort(key=lambda Osob: Osob.fit)
-        while len(self.population)>100: #уменьшим популяцию до 100 особей
+        while len(self.population)>100: 
             del self.population[100]
 
-        for osob in self.population:  #добавим оставшимся особям физические связи
-            #print(osob.fit)
+        self.bestOsob.fit=5000
+        self.bestOsob.genom=[]
+
+        for osob in self.population:
             self.ph_links(osob)
             osob.fit=10000
-        #print (len(self.population[0].ph_link))
-        #for j in range (len(self.population[0].ph_link)):
-         #   print (self.population[0].ph_link[j].home.name)
-          #  print (self.population[0].ph_link[j].end.name)
-        #print (self.population[0].genom)
 
         self.bestOsob_alive3=0
-        while self.bestOsob_alive3 < 100: #пока лучшая особь не останется лучшей 100 раз 
-            for i in range(100):        #алгоритм работает с учетом третьего модуля
+        while self.bestOsob_alive3 < 1:
+            for i in range(0,100):       
                 self.fitness_3modul(self.population[i])
             self.population.sort(key=lambda Osob: Osob.fit)
-            if self.bestOsob.genom!=self.population[0].genom: #счетчик алгоритма
+            if self.bestOsob.genom!=self.population[0].genom:
                 self.bestOsob.genom=self.population[0].genom[:]
                 self.bestOsob.fit=self.population[0].fit
                 self.bestOsob.ph_link=self.population[0].ph_link[:]
                 self.bestOsob_alive3=0
             else:
                 self.bestOsob_alive3 = self.bestOsob_alive3+1
-            #print (self.population[8].fit)
-            bestNum=int((len(self.population))*0.2) #выбираем процент лучших особей, 
+            bestNum=int((len(self.population))*0.2)
             best=self.population[0:(bestNum)]
             for osob in self.population[(bestNum):-1]:
-                #r=0
-                #while r<len(osob.ph_link):
-                 #   print(osob.ph_link[r].home.name)
-                  #  print(osob.ph_link[r].end.name)
-                   # r+=1
-                #print (osob.genom)
                 self.cross(best, osob)
                 self.ph_links(osob)
-                #r=0
-                #while r<len(osob.ph_link):
-                 #   print(osob.ph_link[r].home.name)
-                  #  print(osob.ph_link[r].end.name)
-                   # r+=1
-                #print (osob.genom)
             for osob in self.population[1:(bestNum)]:
                 self.mutation(osob)
                 self.ph_links(osob)
 
         print (self.bestOsob.genom)
-        r=0
-        while r<len(self.bestOsob.ph_link):
-            print(self.bestOsob.ph_link[r].home.name)
-            print(self.bestOsob.ph_link[r].end.name)
-            r+=1
         print (self.bestOsob.fit)
-        self.ph_link=[]
         self.ph_links(self.bestOsob)
-        #print (self.bestOsob.ph_link[0].home.name)
-        #print (self.Ph_link)
+        self.draw_graph(self.bestOsob)
+        
+        #визуализация
+    def draw_graph(self, osob):
+        G=nx.Graph() #граф физ связей
+        F=nx.Graph() #граф лог связей
+        #for edge in osob.ph_link+self.Log_Con:
+        for edge in osob.ph_link:
+            G.add_edge(edge.home.name, edge.end.name)
+        graph_pos={}
+        for item in osob.ph_link:
+            graph_pos[item.home.name]=[item.home.coords.x,item.home.coords.y]
+            graph_pos[item.end.name]=[item.end.coords.x,item.end.coords.y]
+        #print (graph_pos)
+        for edge in self.Log_Con:
+            F.add_edge(edge.home.name, edge.end.name)
+        graphlog_pos={}
+        for item in self.Log_Con:
+            graphlog_pos[item.home.name]=[item.home.coords.x,item.home.coords.y]
+            graphlog_pos[item.end.name]=[item.end.coords.x,item.end.coords.y]
+        #print (graphlog_pos)
+        nx.draw_networkx_edges(G, graph_pos, edge_size=5, edge_color='orange')
+        #nx.draw_networkx_edges(G, graph_pos, read_edgelist(osob.ph_link,create_using=networkx.Graph()), edge_size=5, edge_color='black') 
+        #nx.draw_networkx_edges(G, graph_pos, read_edgelist(self.Log_Con,create_using=networkx.Graph()), edge_size=5, edge_color='yellow')
+        nx.draw_networkx_nodes(G, graph_pos,  node_size=1000, node_color='red', alpha=1.0)
+        nx.draw_networkx_edges(F, graph_pos, edge_size=5, edge_color='black',linestyle = '--')
+        #nx.draw_networkx_nodes(G, graph_pos, nodelist=self.Terminal.name , node_size=1000, node_color='red', alpha=1.0)
+        #nx.draw_networkx_nodes(G, graph_pos, nodelist=self.MU.name , node_size=100, node_color='green', alpha=1.0) 
+        #nx.draw_networkx_nodes(G, graph_pos, nodelist=self.Switch.name , node_size=1000, node_color='blue', alpha=1.0) 
+        nx.draw_networkx_labels(G, graph_pos, font_size=12, font_family='sans-serif')
+        plt.show()
 
-        #return self.bestOsob
-  
+        
 
     def ph_links(self, osob): #определение физических связей
         osob.ph_link=[]
-        for ied1 in self.IED:
-            genPart = osob.genom[ied1.genStart:ied1.genEnd]
+        for mu1 in self.MU:
+            genPart = osob.genom[mu1.genStart:mu1.genEnd]
             for i in range(0,len(genPart)):
                 if genPart[i]>0:
                     phl=Physical_link()
-                    phl.home=ied1
+                    phl.home=mu1
                     phl.end=self.Switch[i]
+                    osob.ph_link.append(phl)
+                else:
+                    continue
+        for term1 in self.Terminal:
+            genPart = osob.genom[term1.genStart:term1.genEnd]
+            for i in range(0,len(genPart)):
+                if genPart[i]>0:
+                    phl=Physical_link()
+                    phl.home=self.Switch[i]
+                    phl.end=term1
                     osob.ph_link.append(phl)
                 else:
                     continue
@@ -204,17 +220,17 @@ class GenAlg:
     def fitness_3modul(self, osob): #подсчет фитнесс-функции с учетом 3 модуля
         g = osob.genom
         osob.fit=0
-        for f in self.fitness_functions:
+        for f in self.fitness_functions_3modul:
             osob.fit = osob.fit + f(self, g)
-        #print (osob.fit)
-        if osob.fit<1:
+        if osob.fit==0:
             osob.fit+=self.fitnessAstar(osob)
         else:
             osob.fit+=10000
+        osob.fit+=self.fitness4(g)
         return (osob.fit)
 
 
-    def fitness1(self, genom): #первая фитнесс-функция. проверяет, чтобы все иеды имели хотя бы одно подкл-е
+    def fitness1(self, genom): #1ff: проверяет, чтобы все иеды имели хотя бы одно подкл-е
         f1=0
         for ied1 in self.IED:
             h=0
@@ -230,7 +246,7 @@ class GenAlg:
         return f1
         
         
-    def fitness2(self, genom): #2я фитнесс-функции. проверяет, чтобы кол-во занятых 
+    def fitness2(self, genom): #ff2: проверяет, чтобы кол-во занятых 
         f2=0                   #100MB портов свитчей не превышало кол-во портов имеющихся
         for i in range (self.switchQuantity):
             p=0
@@ -247,9 +263,9 @@ class GenAlg:
         return f2
 
 
-    def fitness3(self, genom): #3я фитнесс-функция: проверяет, чтобы кол-во занятых 1GB-портов
+    def fitness3(self, genom): #ff3: проверяет, чтобы кол-во занятых 1GB-портов
         f3=0                   #не превышало портов имеющихся, а также,  чтобы каждый свитч
-        for switch1 in self.Switch:   #имел хоть одну связь с другим
+        for switch1 in self.Switch:   #имел хоть одну связь с другим   
             u=0
             n=self.Switch.index(switch1)
             genPart = genom[switch1.genStart:switch1.genEnd]
@@ -277,59 +293,74 @@ class GenAlg:
                 f3+=(u-self.portNumberGB)*1003
             else:
                 f3+=0
-            if u<2:
+            if u<1:
                 f3+=9998
             else:
                 f3+=0
         return f3
-    
-            
-    def fitnessAstar(self, osob): #здесь д.б. 3й модуль
-        G=nx.Graph()
-        r=0
-        #print (osob.genom)
-        while r<len(osob.ph_link):
-            #print(osob.ph_link[r].home.name)
-            #print(osob.ph_link[r].end.name)
-            #print(r)
-            G.add_edge((osob.ph_link[r].home.name),(osob.ph_link[r].end.name), weight = osob.ph_link[r].weight)
-            osob.ph_link[r].weight=1
-            r+=1
-        #print(G)
-            
 
-        m=0
-        i=0
-        j=0
+    def fitness4(self, genom): #ff4 минимизирование физ связей
+        f4=0
+        counter=0
+        device_amount=(len(self.IED)+len(self.Switch))
+        for link in genom:
+            if link==1:
+                counter+=1
+            else:
+                continue 
+        if counter>device_amount:
+            f4+= 11*(counter-device_amount)
+        else:
+            f4+=0
+        return f4
+
+    def fitness5(self, genom): #ff5 проверка на наличие у свитча хотя бы одной связи с иед
+        f5=0
+        for i in range (self.switchQuantity):
+            p=0
+            for ied1 in self.IED:
+                genPart = genom[ied1.genStart:ied1.genEnd]
+                if genPart[i-1]>0:
+                    p += 1
+                else:
+                    continue
+            if p==0:
+                f5+=7001
+            else:
+                f5+=0
+        return f5
         
-        while m<(len(self.Log_Con)):
-            y=(self.Log_Con[m].home.name)
-            z=(self.Log_Con[m].end.name)
-            f=nx.astar_path(G,y,z,heuristic=None)
-            #print('m=',m)
-            #print(f)
-            m=m+1
-            while i<(len(f)-1): # Анализируем ребра 
-                while j<(len(osob.ph_link)): #Находим iое ребро в списке e
-                    if osob.ph_link[j].home==f[i] and osob.ph_link[j].end==f[i+1]: 
-                        osob.ph_link[j].weight=(osob.ph_link[j].weight)+1
-                        G.add_edge(osob.ph_link[j].home,osob.ph_link[j].end, weight = osob.ph_link[j].weight)
-                    j=j+1
-                i=i+1
-                j=0
-            i=0
-        k=0
+            
+    def fitnessAstar(self, osob):
         W=0
-        R=0
-        while k<(len(osob.ph_link)):
-            if osob.ph_link[k].weight>5:
-                W+=100*math.fabs(osob.ph_link[k].weight-5)
-            if osob.ph_link[k].weight==1:
-                W+=100*math.fabs(osob.ph_link[k].weight)
-                
-            k=k+1
+        G=nx.Graph()
+        for phl in osob.ph_link:
+            phl.weight=1
+            G.add_edge(phl.home.name, phl.end.name, weight = phl.weight)
+        #print(G)
+        for log in self.Log_Con:
+            log_h=log.home.name
+            log_e=log.end.name
+            f = nx.astar_path(G,log_h,log_e,heuristic=None,weight='weight')
+            #print (f)
+            if nx.has_path(G,log_h,log_e)==True:
+                for link in range (0, len(f)-1): # Анализируем ребра
+                    for phl in osob.ph_link: # проверка на наличие
+                        if phl.home.name==f[link] and phl.end.name==f[link+1]:
+                            phl.weight+=1
+                        G.edge[phl.home.name][phl.end.name]['weight'] = phl.weight
+                        #print (phl.weight)
+                        #print (phl.home.name)
+                        #print (phl.end.name)
+            elif nx.has_path(G,log_h,log_e)==False:
+                W+=10000
+        for phl in osob.ph_link:
+            if phl.weight>5:
+                W+=100*math.fabs(phl.weight-5)
+            if phl.weight==1:
+                W+=301*math.fabs(phl.weight)
+        #print(W)
         return W
-
 
 
     def cross(self, good_pop, bad_old_osob): #скрещивание
@@ -358,6 +389,3 @@ class GenAlg:
                 osob.genom[i]=0
             z+=1
         return osob 
-
-        
-        

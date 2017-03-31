@@ -9,7 +9,7 @@ class Osob:
     switchQuantity=0
     portNumber=Switch.portNumber
     portNumberGB=Switch.portNumGB
-    ph_link=[]
+    #ph_link=[]
     
     def __init__(self, length):
         self.genom=[]
