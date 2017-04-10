@@ -1,0 +1,1077 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<Terminals-info>
+   <Terminal>
+      <name>terminal1</name>
+      <ports>5</ports>
+	  <model>siemens</model>
+	  <iedType>7ut87-at1</iedType>
+	  <functions>none</functions>
+   </Terminal>
+   <Terminal>
+      <name>terminal2</name>
+      <ports>5</ports>
+	  <model>siemens</model>
+	  <iedType>7ut87-at1</iedType>
+	  <functions>none</functions>
+   </Terminal>
+   <Terminal>
+      <name>terminal3</name>
+      <ports>5</ports>
+	  <model>siemens</model>
+	  <iedType>7ut87-at2</iedType>
+	  <functions>none</functions>
+   </Terminal>		
+   <Terminal>
+      <name>terminal4</name>
+      <ports>5</ports>
+	  <model>siemens</model>
+	  <iedType>7ut87-at2</iedType>
+	  <functions>none</functions>
+   </Terminal>
+   <Terminal>
+      <name>terminal5</name>
+      <ports>5</ports>
+	  <model>siemens</model>
+	  <iedType>7ut87-w1c</iedType>
+	  <functions>none</functions>
+   </Terminal>
+   <Terminal>
+      <name>terminal6</name>
+      <ports>5</ports>
+	  <model>siemens</model>
+	  <iedType>7ut87-w1c</iedType>
+	  <functions>none</functions>
+   </Terminal>
+   <Terminal>
+      <name>terminal7</name>
+      <ports>5</ports>
+	  <model>siemens</model>
+	  <iedType>7ut87-w2c</iedType>
+	  <functions>none</functions>
+   </Terminal>
+   <Terminal>
+      <name>terminal8</name>
+      <ports>5</ports>
+	  <model>siemens</model>
+	  <iedType>7ut87-w2c</iedType>
+	  <functions>none</functions>
+   </Terminal>
+   <Terminal>
+      <name>terminal9</name>
+      <ports>5</ports>
+	  <model>siemens</model>
+	  <iedType>7ut87-w3c</iedType>
+	  <functions>none</functions>
+   </Terminal>
+   <Terminal>
+      <name>terminal10</name>
+      <ports>5</ports>
+	  <model>siemens</model>
+	  <iedType>7ut87-w3c</iedType>
+	  <functions>none</functions>
+   </Terminal>
+   <Terminal>
+      <name>terminal11</name>
+      <ports>5</ports>
+	  <model>siemens</model>
+	  <iedType>7ut87-w4c</iedType>
+	  <functions>none</functions>
+   </Terminal>
+   <Terminal>
+      <name>terminal12</name>
+      <ports>5</ports>
+	  <model>siemens</model>
+	  <iedType>7ut87-w4c</iedType>
+	  <functions>none</functions>
+   </Terminal>
+</Terminals-info>
+<MU-info>
+   <MU>
+      <name>MU_1</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_2</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_3</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_4</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_5</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_6</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_7</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_8</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_9</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_10</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_11</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_12</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_13</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_14</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_15</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_16</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_17</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_18</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_19</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_20</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_21</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_22</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_23</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_24</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_25</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_26</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_27</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_28</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_29</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_30</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_31</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_32</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_33</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_34</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_35</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_36</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_37</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_38</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_39</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_40</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_41</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_42</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_43</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_44</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_45</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_46</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_47</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_48</name>
+      <ports>10</ports>
+   </MU>
+   <MU>
+      <name>MU_49</name>
+      <ports>10</ports>
+   </MU>
+</MU-info>
+	<Port-info>
+		<Port>
+			<port_type>cooper</port_type>
+			<speed>100</speed>
+			<device>MU</device>
+		</Port>
+	</Port-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal1</end>
+		<home>MU_1</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal1</end>
+		<home>MU_2</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal1</end>
+		<home>MU_3</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal1</end>
+		<home>MU_5</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal1</end>
+		<home>MU_6</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal2</end>
+		<home>MU_1</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal2</end>
+		<home>MU_5</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal2</end>
+		<home>MU_7</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>т
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal2</end>
+		<home>MU_8</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal2</end>
+		<home>MU_9</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal3</end>
+		<home>MU_9</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal3</end>
+		<home>MU_10</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal3</end>
+		<home>MU_11</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal3</end>
+		<home>MU_16</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal3</end>
+		<home>MU_17</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal4</end>
+		<home>MU_12</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal4</end>
+		<home>MU_13</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal4</end>
+		<home>MU_14</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal4</end>
+		<home>MU_16</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal4</end>
+		<home>MU_17</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal5</end>
+		<home>MU_1</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal5</end>
+		<home>MU_2</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal5</end>
+		<home>MU_3</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal5</end>
+		<home>MU_6</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal5</end>
+		<home>MU_7</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal5</end>
+		<home>MU_8</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal5</end>
+		<home>MU_9</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal5</end>
+		<home>MU_13</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal5</end>
+		<home>MU_14</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal5</end>
+		<home>MU_16</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal6</end>
+		<home>MU_3</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal6</end>
+		<home>MU_4</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal6</end>
+		<home>MU_5</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal6</end>
+		<home>MU_9</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal6</end>
+		<home>MU_10</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal6</end>
+		<home>MU_11</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal6</end>
+		<home>MU_14</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal6</end>
+		<home>MU_15</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal6</end>
+		<home>MU_17</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal6</end>
+		<home>MU_18</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal6</end>
+		<home>MU_28</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal7</end>
+		<home>MU_3</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal7</end>
+		<home>MU_4</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal7</end>
+		<home>MU_5</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal7</end>
+		<home>MU_17</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal7</end>
+		<home>MU_18</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal7</end>
+		<home>MU_19</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal7</end>
+		<home>MU_20</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal7</end>
+		<home>MU_21</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal7</end>
+		<home>MU_22</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal7</end>
+		<home>MU_23</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal7</end>
+		<home>MU_24</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal7</end>
+		<home>MU_25</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal7</end>
+		<home>MU_26</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal7</end>
+		<home>MU_27</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal7</end>
+		<home>MU_38</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal8</end>
+		<home>MU_5</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal8</end>
+		<home>MU_14</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal8</end>
+		<home>MU_15</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal8</end>
+		<home>MU_17</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal8</end>
+		<home>MU_28</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal8</end>
+		<home>MU_29</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal8</end>
+		<home>MU_30</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal8</end>
+		<home>MU_31</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal8</end>
+		<home>MU_32</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal8</end>
+		<home>MU_33</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal8</end>
+		<home>MU_34</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal8</end>
+		<home>MU_35</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal8</end>
+		<home>MU_36</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal8</end>
+		<home>MU_37</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal8</end>
+		<home>MU_38</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal8</end>
+		<home>MU_39</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal8</end>
+		<home>MU_41</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal9</end>
+		<home>MU_38</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal9</end>
+		<home>MU_39</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal9</end>
+		<home>MU_40</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal9</end>
+		<home>MU_41</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal9</end>
+		<home>MU_42</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal9</end>
+		<home>MU_43</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal10</end>
+		<home>MU_38</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal10</end>
+		<home>MU_39</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal10</end>
+		<home>MU_40</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal10</end>
+		<home>MU_41</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal10</end>
+		<home>MU_44</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal10</end>
+		<home>MU_45</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal11</end>
+		<home>MU_38</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal11</end>
+		<home>MU_39</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal11</end>
+		<home>MU_40</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal11</end>
+		<home>MU_41</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal11</end>
+		<home>MU_46</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal11</end>
+		<home>MU_47</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal12</end>
+		<home>MU_38</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal12</end>
+		<home>MU_39</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal12</end>
+		<home>MU_40</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal12</end>
+		<home>MU_41</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal12</end>
+		<home>MU_48</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Logical_conn-info>
+	<Logical_conn>
+		<l_type>cooper</l_type>
+		<end>terminal12</end>
+		<home>MU_49</home>
+		<sv_num>1</sv_num>
+	</Logical_conn>
+</Logical_conn-info>
+<Switch-info>
+	<Switch>
+		<name>ur</name>
+		<portNumber>24</portNumber>
+		<portNumGB>8</portNumGB>
+	</Switch>
+</Switch-info>
+</root>
