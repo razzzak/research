@@ -176,7 +176,7 @@ class TestUM(unittest.TestCase):
         osob3.genom=[1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,1,1,1,1,1]
         y=self.genalg.fitness4(osob3.genom)
         print ("fitness4 =%s"%y)
-        assert(y==33)
+        assert(y==44)
 
     def test_fitness5(self):
         length=20

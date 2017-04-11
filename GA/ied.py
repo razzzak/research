@@ -1,5 +1,4 @@
 from gen import Gen
-
 class IED:
     iedType = 'terminal'
     model = 'siemens'
@@ -15,6 +14,9 @@ class Coords():
 
 
 class MU(IED):
+    name = 'f1'
+    summ=set()#mnozehstvo v kot zapisani vse log Terminal dlya kot trebuetsya
+    ports = [] #information ot dannogo MU
     coords=Coords(0,0)
     count=0
     def __init__(self):
@@ -22,19 +24,21 @@ class MU(IED):
         MU.coords.x+=20
         MU.count+=1;
         self.name=MU.count
- #   def __str__(self):
-  #      return "MU%i"%self.name
+    def __str__(self):
+        return "%s"%self.name
 
 class Terminal(IED):
-    coords=Coords(0,500)
+    name = '7ut87-at1'
+    ports = []
+    functions = []
+    coords=Coords(0,700)
     count=0
     def __init__(self):
         self.coords = Coords(Terminal.coords.x, Terminal.coords.y)
-        Terminal.coords.x+=20
+        Terminal.coords.x+=75
         Terminal.count+=1;
         self.name=Terminal.count
-  #  def __str__(self):
-   #     return "Terminal%i"%self.name
-
+    def __str__(self):
+        return "%s"%self.name
 
 
